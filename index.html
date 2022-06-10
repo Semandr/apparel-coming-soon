@@ -20,8 +20,56 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-    We're coming soon Hello fellow shoppers! We're currently building our new
-    fashion store. Add your email below to stay up-to-date with announcements
-    and our launch deals. Email Address
+    <div class="container">
+      <header class="header">
+        <a href="#" class="header__logo logo">
+          <img
+            class="logo__img"
+            src="./images/logo.svg"
+            alt="logo Base Apparel"
+          />
+        </a>
+      </header>
+      <aside class="aside">
+        <img
+          class="aside__img aside__img_desktop"
+          src="./images/hero-desktop.jpg"
+          alt="photo of women"
+        />
+        <img
+          class="aside__img aside__img_mobile visually-hidden"
+          src="./images/hero-mobile.jpg"
+          alt="photo of women"
+        />
+      </aside>
+      <main class="main">
+        <h1 class="title title__block">
+          <span class="title__brand title__brand_color">We're</span>
+          <span class="title__brand">coming</span>
+          <span class="title__brand">soon</span>
+        </h1>
+        <p class="paragraph paragraph__main">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+      </main>
+      <footer class="footer">
+        <form class="form">
+          <label class="form__label" for="email"></label>
+          <input
+            class="form__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+          <button class="btn btn__submit" type="submit">
+            <img src="./images/icon-arrow.svg" alt="icon-arrow to right" />
+          </button>
+        </form>
+      </footer>
+    </div>
   </body>
 </html>
