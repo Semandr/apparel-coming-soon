@@ -1,6 +1,9 @@
 .container {
-  background: url(../../images/bg-pattern-desktop.svg) top/cover no-repeat,
-    linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+  max-width: 100vw;
+  max-height: 100vh;
+  // background: url(../../images/bg-pattern-desktop.svg) top/cover no-repeat,
+  //   linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+  color: var(--clr-desaturated-red);
 
   display: grid;
   grid-template-columns: 58% 42%;
@@ -47,6 +50,7 @@
 }
 .main {
   grid-area: main;
+  max-width: 46rem;
 }
 
 .footer {
