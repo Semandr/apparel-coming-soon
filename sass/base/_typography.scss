@@ -1,5 +1,17 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
-  background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+}
+.paragraph {
+  &__main {
+  }
+}
+.title {
+  &__block {
+  }
+
+  &__brand {
+    &_color {
+    }
+  }
 }
