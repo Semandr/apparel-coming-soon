@@ -51,18 +51,30 @@
       </main>
       <footer class="footer container__content">
         <form class="form">
-          <label class="form__label" for="email"></label>
-          <input
-            class="form__input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-            required
-          />
-          <button class="btn btn__submit" type="submit">
-            <img src="./images/icon-arrow.svg" alt="icon-arrow to right" />
-          </button>
+          <div class="inputBx">
+            <input
+              class="form__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <img
+              class="form__error-img"
+              src="./images/icon-error.svg"
+              alt="icon of error"
+            />
+            <img
+              class="form__ok-img"
+              src="./images/checkmark.svg"
+              alt="icon of error"
+            />
+            <span class="form__error-msg">Please provide a valid email</span>
+            <button class="btn btn__submit" type="submit">
+              <img src="./images/icon-arrow.svg" alt="icon-arrow to right" />
+            </button>
+          </div>
         </form>
       </footer>
     </div>

@@ -1,2 +1,30 @@
 "use strict";
-// variable.value = string value for email validation
+const input = document.getElementById("email");
+const errorMsg = document.querySelector(".form__error-msg");
+const errorImg = document.querySelector(".form__error-img");
+const okImg = document.querySelector(".form__ok-img");
+const btn = document.querySelector(".btn__submit");
+let pattern =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!input.value.match(pattern)) {
+    errorMsg.style.display = "block";
+    errorImg.style.display = "block";
+    setTimeout(() => {
+      errorMsg.style.display = "none";
+      errorImg.style.display = "none";
+      input.value = "";
+    }, 5000);
+  }
+  if (input.value.match(pattern)) {
+    okImg.style.display = "block";
+    input.placeholder = "Thank you";
+    setTimeout(() => {
+      okImg.style.display = "none";
+      input.placeholder = "Email Address";
+    }, 3000);
+    input.value = "";
+  }
+});
