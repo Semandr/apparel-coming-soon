@@ -36,10 +36,22 @@
     display: none;
   }
 }
+@media screen and (max-width: 500px) {
+  .form {
+    width: 28rem;
+    margin: 0 auto;
 
+    &__input {
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 1rem;
+    }
+    &__error-img,
+    &__ok-img {
+      top: 15%;
+      right: 20%;
+    }
+  }
+}
 .inputBx {
   position: relative;
 }
-// .form__input:invalid ~ .form__error-img {
-//   display: block;
-// }

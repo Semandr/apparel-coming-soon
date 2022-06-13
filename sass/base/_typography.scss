@@ -29,3 +29,15 @@ body {
     }
   }
 }
+@media screen and (max-width: 500px) {
+  .paragraph {
+    &__main {
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      max-width: 30rem;
+      margin: 0 auto;
+      margin-bottom: -2rem;
+    }
+  }
+}

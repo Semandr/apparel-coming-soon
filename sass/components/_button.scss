@@ -2,7 +2,6 @@
   display: inline-block;
   border: none;
   cursor: pointer;
-  // transition: all 0.3s ease;
   &__submit {
     position: absolute;
     top: 0;
@@ -19,6 +18,14 @@
     &:hover {
       background: var(--gradient-3);
       box-shadow: 0 1rem 2rem var(--gradient-3);
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn {
+    &__submit {
+      right: -2rem;
+      padding: 1.3rem 3rem;
     }
   }
 }
