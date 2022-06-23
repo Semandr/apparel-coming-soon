@@ -3,12 +3,11 @@ const input = document.getElementById("email");
 const errorMsg = document.querySelector(".form__error-msg");
 const errorImg = document.querySelector(".form__error-img");
 const okImg = document.querySelector(".form__ok-img");
-const btn = document.querySelector(".btn__submit");
+const btnSubmit = document.querySelector(".btn__submit");
 let pattern =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-btn.addEventListener("click", (e) => {
-  e.preventDefault();
+function matchingPattern() {
   if (!input.value.match(pattern)) {
     errorMsg.style.display = "block";
     errorImg.style.display = "block";
@@ -17,8 +16,7 @@ btn.addEventListener("click", (e) => {
       errorImg.style.display = "none";
       input.value = "";
     }, 5000);
-  }
-  if (input.value.match(pattern)) {
+  } else {
     okImg.style.display = "block";
     input.placeholder = "Thank you";
     setTimeout(() => {
@@ -27,4 +25,9 @@ btn.addEventListener("click", (e) => {
     }, 3000);
     input.value = "";
   }
+}
+
+btnSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
+  matchingPattern();
 });
